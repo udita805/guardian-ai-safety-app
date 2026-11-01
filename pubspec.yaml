@@ -1,0 +1,43 @@
+name: guardian_ai
+description: "Guardian AI - Personal Safety & Autonomous Emergency Response MVP"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Simultaneous High-Decibel Siren on Alarm Stream
+  just_audio: ^0.9.36
+  audio_session: ^0.1.18
+
+  # Rapid LED Flashlight Strobe
+  torch_light: ^1.0.0
+
+  # Automated Background Visual Evidence Capture
+  camera: ^0.10.5+9
+
+  # Secure Local Storage & Cryptographic FIR Chain of Custody
+  path_provider: ^2.1.2
+  crypto: ^3.0.3
+
+  # Granular Runtime Permission Checks
+  permission_handler: ^11.3.1
+
+  # Icons & Styling
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Emergency Audio Asset Bundle
+  assets:
+    - assets/audio/emergency_siren.mp3
