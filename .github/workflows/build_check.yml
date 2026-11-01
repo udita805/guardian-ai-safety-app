@@ -1,4 +1,4 @@
-name: Check Flutter Code Build
+name: Check and Build Android APK
 
 on:
   push:
@@ -24,6 +24,7 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
+          cache: true
 
       - name: Install Dependencies
         run: flutter pub get
@@ -31,5 +32,8 @@ jobs:
       - name: Analyze Code Syntax
         run: flutter analyze --no-fatal-infos || true
 
-      - name: Build Android APK
+      - name: Accept Android Licenses
+        run: yes | flutter doctor --android-licenses || true
+
+      - name: Build Android APK (Debug)
         run: flutter build apk --debug
